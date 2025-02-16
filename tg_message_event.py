@@ -34,7 +34,7 @@ class TelegramPlatformEvent(AstrMessageEvent):
                 if at_user_id and not at_flag:
                     i.text = f"@{at_user_id} " + i.text
                     at_flag = True
-                await client.send_message(text=i.text, parse_mode='MarkdownV2', **payload)
+                await client.send_message(text=i.text, parse_mode="MarkdownV2", **payload)
             elif isinstance(i, Image):
                 if i.path:
                     image_path = i.path
